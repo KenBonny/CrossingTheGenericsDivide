@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.KenBonny.CrossingTheGenericsDivide.iml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\kenbo\Projects\KenBonny.CrossingTheGenericsDivide\.idea\.idea.KenBonny.CrossingTheGenericsDivide\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
