@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using KenBonny.CrossingTheGenericsDivide.Composition;
 using KenBonny.CrossingTheGenericsDivide.CompositionWithFactory;
 using KenBonny.CrossingTheGenericsDivide.Inheritance;
@@ -18,13 +19,28 @@ namespace KenBonny.CrossingTheGenericsDivide
 				new AutoPolicy()
 			};
 
+			var stopwatch = Stopwatch.StartNew();
 			HardcodedPolicyProcessor.Process(policies);
+			stopwatch.Stop();
+			Console.WriteLine($"Elapsed: {stopwatch.Elapsed:c} ({stopwatch.ElapsedTicks:0 000})");
+
 			Console.WriteLine();
+			stopwatch.Restart();
 			InheritanceGenericProcessor.Process(policies);
+			stopwatch.Stop();
+			Console.WriteLine($"Elapsed: {stopwatch.Elapsed:c} ({stopwatch.ElapsedTicks:0 000})");
+
 			Console.WriteLine();
+			stopwatch.Restart();
 			CompositionGenericProcessor.Process(policies);
+			stopwatch.Stop();
+			Console.WriteLine($"Elapsed: {stopwatch.Elapsed:c} ({stopwatch.ElapsedTicks:0 000})");
+
 			Console.WriteLine();
+			stopwatch.Restart();
 			CompositionWithFactoryGenericProcessor.Process(policies);
+			stopwatch.Stop();
+			Console.WriteLine($"Elapsed: {stopwatch.Elapsed:c} ({stopwatch.ElapsedTicks:0 000})");
 		}
 	}
 
