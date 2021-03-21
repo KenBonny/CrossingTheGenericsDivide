@@ -1,5 +1,6 @@
 ﻿using System;
 using KenBonny.CrossingTheGenericsDivide.Composition;
+using KenBonny.CrossingTheGenericsDivide.CompositionWithFactory;
 using KenBonny.CrossingTheGenericsDivide.Inheritance;
 
 namespace KenBonny.CrossingTheGenericsDivide
@@ -22,6 +23,8 @@ namespace KenBonny.CrossingTheGenericsDivide
 			InheritanceGenericProcessor.Process(policies);
 			Console.WriteLine();
 			CompositionGenericProcessor.Process(policies);
+			Console.WriteLine();
+			CompositionWithFactoryGenericProcessor.Process(policies);
 		}
 	}
 
